@@ -9,7 +9,7 @@ local function processClientItem(itemName, itemData)
 	local clientItem = table.clone(itemData)
 	clientItem.name = itemName
 
-	-- Set default values
+	-- Set default values (matching shared.lua logic)
 	clientItem.weight = clientItem.weight or 0
 
 	if clientItem.close == nil then
@@ -20,41 +20,47 @@ local function processClientItem(itemName, itemData)
 		clientItem.stack = true
 	end
 
+	local clientData = clientItem.client
+	local serverData = clientItem.server
+
+	-- Auto-set consume if needed (matching shared.lua:32-34)
+	if not clientItem.consume and (clientData and (clientData.status or clientData.usetime or clientData.export) or (serverData and serverData.export)) then
+		clientItem.consume = 1
+	end
+
 	-- Remove server data from client-side item
 	clientItem.server = nil
 	clientItem.count = 0
 
-	local clientData = clientItem.client
-	if clientData then
-		-- Process image path
-		local function setImagePath(path)
-			if path then
-				return path:match('^[%w]+://') and path or ('%s/%s'):format(client.imagepath, path)
+	if not clientData then
+		Items[itemName] = clientItem
+		return
+	end
+
+	-- Process image path
+	local function setImagePath(path)
+		if path then
+			return path:match('^[%w]+://') and path or ('%s/%s'):format(client.imagepath, path)
+		end
+	end
+
+	clientData.image = setImagePath(clientData.image)
+
+	-- Process export
+	if clientData.export then
+		local function useExport(resource, export)
+			return function(...)
+				return exports[resource][export](nil, ...)
 			end
 		end
-
-		if clientData.image then
-			clientData.image = setImagePath(clientData.image)
-		end
-
-		-- Process export
-		if clientData.export then
-			local function useExport(resource, export)
-				return function(...)
-					return exports[resource][export](nil, ...)
-				end
-			end
-			clientItem.export = useExport(string.strsplit('.', clientData.export))
-		end
+		clientItem.export = useExport(string.strsplit('.', clientData.export))
 	end
 
 	Items[itemName] = clientItem
 end
 
 -- Register event handler to sync items from server (batch)
-RegisterNetEvent('ox_inventory:syncItems', function(items)
-	if not items or type(items) ~= 'table' then return end
-
+AddEventHandler('ox_inventory:syncItems', function(items)
 	local nuiItems = {}
 
 	for itemName, itemData in pairs(items) do

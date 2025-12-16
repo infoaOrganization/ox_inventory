@@ -3,11 +3,9 @@ if not lib then return end
 local Items = {}
 local ItemList = require 'modules.items.shared' --[[@as table<string, OxServerItem>]]
 local Utils = require 'modules.utils.server'
+local CustomItems = require 'modules.custom.customItems'
 
 TriggerEvent('ox_inventory:itemList', ItemList)
-
--- Store custom registered items for syncing to new clients
-local CustomItems = {}
 
 ---@class ItemClientData
 ---@field status? table<string, number>
@@ -77,8 +75,8 @@ local function processServerItem(itemName, itemData)
 		serverItem.cb = useExport(string.strsplit('.', serverData.export))
 	end
 
-	-- Keep client data on server for syncing to new clients
-	-- serverItem.client is preserved
+	-- Remove client data from server-side item (matching shared.lua:39)
+	serverItem.client = nil
 
 	return serverItem
 end
@@ -130,13 +128,6 @@ local function RegisterItems(items, itemData)
 		shared.info(('%d items have been registered'):format(count))
 	end
 end
-
--- Sync custom items to newly connected players
-AddEventHandler('ox_inventory:setPlayerInventory', function(player)
-	if next(CustomItems) then
-		TriggerClientEvent('ox_inventory:syncItems', player.source, CustomItems)
-	end
-end)
 
 -- Export for direct calls
 exports('registerItems', RegisterItems)

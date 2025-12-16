@@ -27,8 +27,9 @@ prepare_publish() {
 
 finalize_publish() {
   branch=$1
+  message=$2
   git -C tmp add .
-  git -C tmp commit -m "release $(date +%Y-%m-%d)"
+  git -C tmp commit -m "${message:-release $(date +%Y-%m-%d)}"
   git -C tmp push origin "$branch"
   cleanup
 }
@@ -49,4 +50,4 @@ for f in build/*; do
     cp -r "$f" tmp/
 done
 
-finalize_publish release
+finalize_publish release "$1"

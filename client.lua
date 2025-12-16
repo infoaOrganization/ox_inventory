@@ -1181,8 +1181,10 @@ lib.onCache('vehicle', function()
 	end
 end)
 
-RegisterNetEvent('ox_inventory:setPlayerInventory', function(currentDrops, inventory, weight, player)
+RegisterNetEvent('ox_inventory:setPlayerInventory', function(currentDrops, inventory, weight, player, CustomItems)
 	if source == '' then return end
+
+    TriggerEvent('ox_inventory:syncItems', CustomItems)
 
     ---@class PlayerData
     ---@field inventory table<number, SlotWithItem?>
