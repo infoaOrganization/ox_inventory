@@ -13,6 +13,7 @@ dependencies {
     '/onesync',
     'oxmysql',
     'ox_lib',
+    'es_extended',
 }
 
 shared_script '@ox_lib/init.lua'

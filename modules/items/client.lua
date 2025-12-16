@@ -2,6 +2,64 @@ if not lib then return end
 
 local Items = require 'modules.items.shared' --[[@as table<string, OxClientItem>]]
 
+---Process and register item on client-side
+---@param itemName string
+---@param itemData table
+local function processClientItem(itemName, itemData)
+	local clientItem = table.clone(itemData)
+	clientItem.name = itemName
+
+	-- Set default values
+	clientItem.weight = clientItem.weight or 0
+
+	if clientItem.close == nil then
+		clientItem.close = true
+	end
+
+	if clientItem.stack == nil then
+		clientItem.stack = true
+	end
+
+	-- Remove server data from client-side item
+	clientItem.server = nil
+	clientItem.count = 0
+
+	local clientData = clientItem.client
+	if clientData then
+		-- Process image path
+		local function setImagePath(path)
+			if path then
+				return path:match('^[%w]+://') and path or ('%s/%s'):format(client.imagepath, path)
+			end
+		end
+
+		if clientData.image then
+			clientData.image = setImagePath(clientData.image)
+		end
+
+		-- Process export
+		if clientData.export then
+			local function useExport(resource, export)
+				return function(...)
+					return exports[resource][export](nil, ...)
+				end
+			end
+			clientItem.export = useExport(string.strsplit('.', clientData.export))
+		end
+	end
+
+	Items[itemName] = clientItem
+end
+
+-- Register event handler to sync items from server (batch)
+RegisterNetEvent('ox_inventory:syncItems', function(items)
+	if not items or type(items) ~= 'table' then return end
+
+	for itemName, itemData in pairs(items) do
+		processClientItem(itemName, itemData)
+	end
+end)
+
 local function sendDisplayMetadata(data)
     SendNUIMessage({
 		action = 'displayMetadata',
@@ -77,7 +135,7 @@ setmetatable(Items --[[@as table]], {
 local function Item(name, cb)
 	local item = Items[name]
 	if item then
-		if not item.client?.export and not item.client?.event then
+		if not (item.client and (item.client.export or item.client.event)) then
 			item.effect = cb
 		end
 	end
@@ -120,8 +178,8 @@ Item('parachute', function(data, slot)
 				GiveWeaponToPed(cache.ped, chute, 0, true, false)
 				SetPedGadget(cache.ped, chute, true)
 				lib.requestModel(1269906701)
-				client.parachute = {CreateParachuteBagObject(cache.ped, true, true), slot?.metadata?.type or -1}
-				if slot.metadata.type then
+				client.parachute = {CreateParachuteBagObject(cache.ped, true, true), (slot and slot.metadata and slot.metadata.type) or -1}
+				if slot and slot.metadata and slot.metadata.type then
 					SetPlayerParachuteTintIndex(PlayerData.id, slot.metadata.type)
 				end
 			end

@@ -6,6 +6,141 @@ local Utils = require 'modules.utils.server'
 
 TriggerEvent('ox_inventory:itemList', ItemList)
 
+-- Store custom registered items for syncing to new clients
+local CustomItems = {}
+
+---@class ItemClientData
+---@field status? table<string, number>
+---@field anim? string|{dict: string, clip: string, flag?: number}
+---@field prop? string|{model: number|string, pos: vector3, rot: vector3}
+---@field image? string
+---@field usetime? number
+---@field cancel? boolean
+---@field disable? {move?: boolean, car?: boolean, combat?: boolean}
+---@field notification? string
+---@field export? string
+---@field event? string
+
+---@class ItemServerData
+---@field export? string
+
+---@class ItemData
+---@field label string
+---@field weight? number
+---@field stack? boolean
+---@field close? boolean
+---@field description? string
+---@field consume? number
+---@field degrade? number
+---@field durability? boolean
+---@field client? ItemClientData
+---@field server? ItemServerData
+
+---Process item data for server-side storage
+---@param itemName string
+---@param itemData ItemData
+---@return table serverItem The processed server-side item data
+local function processServerItem(itemName, itemData)
+	local serverItem = table.clone(itemData)
+	serverItem.name = itemName
+
+	-- Set default values
+	serverItem.weight = serverItem.weight or 0
+
+	if serverItem.close == nil then
+		serverItem.close = true
+	end
+
+	if serverItem.stack == nil then
+		serverItem.stack = true
+	end
+
+	if not serverItem.consume and (itemData.client and (itemData.client.status or itemData.client.usetime or itemData.client.export) or (itemData.server and itemData.server.export)) then
+		serverItem.consume = 1
+	end
+
+	-- Process durability
+	if not serverItem.durability then
+		if serverItem.degrade or (serverItem.consume and serverItem.consume ~= 0 and serverItem.consume < 1) then
+			serverItem.durability = true
+		end
+	end
+
+	-- Process server-side export callback
+	local serverData = serverItem.server
+	if serverData and serverData.export then
+		local function useExport(resource, export)
+			return function(...)
+				return exports[resource][export](nil, ...)
+			end
+		end
+		serverItem.cb = useExport(string.strsplit('.', serverData.export))
+	end
+
+	-- Keep client data on server for syncing to new clients
+	-- serverItem.client is preserved
+
+	return serverItem
+end
+
+---Register one or more items
+---@param items table<string, ItemData>|string Either a table of items or a single item name
+---@param itemData? ItemData If first param is a string, this is the item data
+local function RegisterItems(items, itemData)
+	-- Handle single item registration: RegisterItems('item_name', {data})
+	if type(items) == 'string' then
+		items = { [items] = itemData }
+	end
+
+	if not items or type(items) ~= 'table' then
+		return error('RegisterItems: first parameter must be a table or string')
+	end
+
+	local count = 0
+	local itemsToSync = {}
+
+	for itemName, data in pairs(items) do
+		if type(itemName) ~= 'string' then
+			return error('RegisterItems: item name must be a string')
+		end
+
+		if not data or type(data) ~= 'table' then
+			return error(('RegisterItems: item data for "%s" must be a table'):format(itemName))
+		end
+
+		-- Process and store server-side item
+		ItemList[itemName] = processServerItem(itemName, data)
+
+		-- Store original data for syncing to new clients
+		CustomItems[itemName] = data
+		itemsToSync[itemName] = data
+
+		count = count + 1
+	end
+
+	-- Batch sync to all connected clients
+	if next(itemsToSync) then
+		TriggerClientEvent('ox_inventory:syncItems', -1, itemsToSync)
+	end
+
+	if count == 1 then
+		local itemName = next(itemsToSync)
+		shared.info(('Item "%s" has been registered'):format(itemName))
+	else
+		shared.info(('%d items have been registered'):format(count))
+	end
+end
+
+-- Sync custom items to newly connected players
+AddEventHandler('ox_inventory:setPlayerInventory', function(player)
+	if next(CustomItems) then
+		TriggerClientEvent('ox_inventory:syncItems', player.source, CustomItems)
+	end
+end)
+
+-- Export for direct calls
+exports('registerItems', RegisterItems)
+
 Items.containers = require 'modules.items.containers'
 
 -- Possible metadata when creating garbage
