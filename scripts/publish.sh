@@ -15,6 +15,7 @@ trap 'cleanup' EXIT
 
 prepare_publish() {
   branch=$1
+  rm -rf tmp
   git clone --single-branch --branch "$branch" https://github.com/infoaOrganization/ox_inventory.git tmp || (
     git init tmp &&
     git -C tmp remote add origin https://github.com/infoaOrganization/ox_inventory.git &&
