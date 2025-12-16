@@ -55,8 +55,41 @@ end
 RegisterNetEvent('ox_inventory:syncItems', function(items)
 	if not items or type(items) ~= 'table' then return end
 
+	local nuiItems = {}
+
 	for itemName, itemData in pairs(items) do
 		processClientItem(itemName, itemData)
+
+		-- Prepare item data for NUI
+		local item = Items[itemName]
+		if item then
+			local buttons = item.buttons and {} or nil
+
+			if buttons then
+				for i = 1, #item.buttons do
+					buttons[i] = {label = item.buttons[i].label, group = item.buttons[i].group}
+				end
+			end
+
+			nuiItems[itemName] = {
+				label = item.label,
+				stack = item.stack,
+				close = item.close,
+				count = 0,
+				description = item.description,
+				buttons = buttons,
+				ammoName = item.ammoname,
+				image = item.client and item.client.image or nil
+			}
+		end
+	end
+
+	-- Send new items to NUI
+	if next(nuiItems) and client.uiLoaded then
+		SendNUIMessage({
+			action = 'updateItems',
+			data = nuiItems
+		})
 	end
 end)
 

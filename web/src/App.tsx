@@ -104,6 +104,11 @@ const App: React.FC = () => {
     dispatch(setupInventory({ leftInventory }));
   });
 
+  // Handle dynamic item updates
+  useNuiEvent<typeof Items>('updateItems', (items) => {
+    for (const name in items) Items[name] = items[name];
+  });
+
   fetchNui('uiLoaded', {});
 
   useNuiEvent('closeInventory', () => {
