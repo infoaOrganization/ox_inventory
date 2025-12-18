@@ -1,3 +1,7 @@
+return {}
+
+--[[ item registration must be done in relavant resource
+
 return {
 	['testburger'] = {
 		label = 'Test Burger',
@@ -223,3 +227,5 @@ return {
 		weight = 80,
 	},
 }
+
+-- ]]
