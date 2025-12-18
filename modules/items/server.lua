@@ -229,10 +229,6 @@ CreateThread(function()
 				end
 
 				file[fileSize+1] = '}'
-
-				SaveResourceFile(shared.resource, 'data/items.lua', table.concat(file), -1)
-				shared.info(count, 'items have been copied from the database.')
-				shared.info('You should restart the resource to load the new items.')
 			end
 
 			shared.info('Database contains', #items, 'items.')
