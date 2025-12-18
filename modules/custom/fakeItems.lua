@@ -83,12 +83,13 @@ local function injectFakeItems(inventory)
         -- Create item in ox_inventory format
         local item = {
             name = itemName,
-            label = fakeItem.label,
+            label = itemName,
             count = fakeItem.count or 1,
             weight = fakeItem.weight or 0,
             slot = currentSlot,
             custom = true, -- Mark as fake/custom item for easy identification and to exclude from weight sum
             metadata = {
+                label = fakeItem.label,
                 description = fakeItem.description,
                 imageurl = fakeItem.imageUrl -- This will be used by NUI for image display
             }
