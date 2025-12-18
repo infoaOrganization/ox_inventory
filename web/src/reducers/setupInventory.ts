@@ -13,10 +13,15 @@ export const setupInventoryReducer: CaseReducer<
   const { leftInventory, rightInventory } = action.payload;
   const curTime = Math.floor(Date.now() / 1000);
 
-  if (leftInventory)
+  if (leftInventory) {
+    // Calculate total slots as max of slot count or highest slot index with an item
+    const allItems = Object.values(leftInventory.items);
+    const maxSlotIndex = allItems.length > 0 ? Math.max(...allItems.filter(item => item?.slot).map(item => item.slot)) : 0;
+    const totalSlots = Math.max(leftInventory.slots, maxSlotIndex);
+
     state.leftInventory = {
       ...leftInventory,
-      items: Array.from(Array(leftInventory.slots), (_, index) => {
+      items: Array.from(Array(totalSlots), (_, index) => {
         const item = Object.values(leftInventory.items).find((item) => item?.slot === index + 1) || {
           slot: index + 1,
         };
@@ -31,6 +36,7 @@ export const setupInventoryReducer: CaseReducer<
         return item;
       }),
     };
+  }
 
   if (rightInventory)
     state.rightInventory = {

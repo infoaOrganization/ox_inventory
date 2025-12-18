@@ -72,7 +72,8 @@ local function injectFakeItems(inventory)
         end
     end
 
-    -- Assign fake items to empty slots starting right after the last real item
+    -- Assign fake items to empty slots starting after the last real item
+    -- Also, start from the next slot that is a multiple of 5
     -- Fake items are not limited by inventory.slots and don't count toward weight
     local currentSlot = math.floor(lastOccupiedSlotCount / 5) * 5 + 6
 
