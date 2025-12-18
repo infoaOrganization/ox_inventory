@@ -7,6 +7,7 @@ export type Slot = {
     [key: string]: any;
   };
   durability?: number;
+  custom?: boolean;
 };
 
 export type SlotWithItem = Slot & {

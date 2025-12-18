@@ -5,6 +5,7 @@ require 'modules.interface.client'
 
 local Utils = require 'modules.utils.client'
 local Weapon = require 'modules.weapon.client'
+local FakeItems = require 'modules.custom.fakeItems'
 local currentWeapon
 
 exports('getCurrentWeapon', function()
@@ -275,6 +276,8 @@ function client.openInventory(inv, data)
     left.items = PlayerData.inventory
     left.groups = PlayerData.groups
 
+    FakeItems.injectFakeItems(left)
+
     SendNUIMessage({
         action = 'setupInventory',
         data = {
@@ -332,6 +335,8 @@ RegisterNetEvent('ox_inventory:forceOpenInventory', function(left, right)
 	currentInventory.ignoreSecurityChecks = true
 	left.items = PlayerData.inventory
 	left.groups = PlayerData.groups
+
+	FakeItems.injectFakeItems(left)
 
 	SendNUIMessage({
 		action = 'setupInventory',
@@ -1588,6 +1593,8 @@ RegisterNetEvent('ox_inventory:viewInventory', function(left, right)
     currentInventory.type = 'inspect'
 	left.items = PlayerData.inventory
 	left.groups = PlayerData.groups
+
+	FakeItems.injectFakeItems(left)
 
 	SendNUIMessage({
 		action = 'setupInventory',
