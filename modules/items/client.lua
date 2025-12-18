@@ -60,7 +60,7 @@ local function processClientItem(itemName, itemData)
 end
 
 -- Register event handler to sync items from server (batch)
-AddEventHandler('ox_inventory:syncItems', function(items)
+RegisterNetEvent('ox_inventory:syncItems', function(items)
 	local nuiItems = {}
 
 	for itemName, itemData in pairs(items) do
