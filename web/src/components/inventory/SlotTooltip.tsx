@@ -13,7 +13,7 @@ const SlotTooltip: React.ForwardRefRenderFunction<
   { item: SlotWithItem; inventoryType: Inventory['type']; style: React.CSSProperties }
 > = ({ item, inventoryType, style }, ref) => {
   const additionalMetadata = useAppSelector((state) => state.inventory.additionalMetadata);
-  const itemData = useMemo(() => Items[item.name], [item]);
+  const itemData = useMemo(() => item.metadata?.itemData ?? Items[item.name], [item]);
   const ingredients = useMemo(() => {
     if (!item.ingredients) return null;
     return Object.entries(item.ingredients).sort((a, b) => a[1] - b[1]);
