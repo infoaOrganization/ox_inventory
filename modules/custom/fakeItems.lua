@@ -7,6 +7,7 @@ local nextId = 1
 ---@field imageUrl string
 ---@field count? number
 ---@field weight? number
+---@field event? string
 
 ---@alias FakeItemProvider fun(): FakeItem[]
 
@@ -87,6 +88,7 @@ local function injectFakeItems(inventory)
             count = fakeItem.count or 1,
             weight = fakeItem.weight or 0,
             slot = currentSlot,
+            event = fakeItem.event,
             custom = true, -- Mark as fake/custom item for easy identification and to exclude from weight sum
             metadata = {
                 label = fakeItem.label,

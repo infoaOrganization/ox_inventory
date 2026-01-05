@@ -1665,6 +1665,12 @@ RegisterNUICallback('useItem', function(slot, cb)
 	cb(1)
 end)
 
+RegisterNUICallback('useFakeItem', function(event, cb)
+    client.closeInventory()
+    TriggerEvent(event)
+	cb(1)
+end)
+
 local function giveItemToTarget(serverId, slotId, count)
     if type(slotId) ~= 'number' then return TypeError('slotId', 'number', type(slotId)) end
     if count and type(count) ~= 'number' then return TypeError('count', 'number', type(count)) end
