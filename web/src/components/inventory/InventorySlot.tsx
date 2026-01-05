@@ -115,8 +115,11 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
   const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
     dispatch(closeTooltip());
     if (timerRef.current) clearTimeout(timerRef.current);
-    // Disable click actions for fake/custom items
-    if (item.custom) return;
+    // Limit click actions to items with "event" property for fake/custom items
+    if (item.custom) {
+      onUse(item);
+      return;
+    }
     if (event.ctrlKey && isSlotWithItem(item) && inventoryType !== 'shop' && inventoryType !== 'crafting') {
       onDrop({ item: item, inventory: inventoryType });
     } else if (event.altKey && isSlotWithItem(item) && inventoryType === 'player') {

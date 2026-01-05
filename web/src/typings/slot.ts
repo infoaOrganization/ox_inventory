@@ -1,4 +1,6 @@
-export type Slot = {
+export type Slot = RealSlot | FakeSlot;
+
+export type SlotBase = {
   slot: number;
   name?: string;
   count?: number;
@@ -7,7 +9,15 @@ export type Slot = {
     [key: string]: any;
   };
   durability?: number;
-  custom?: boolean;
+};
+
+export type RealSlot = SlotBase & {
+  custom?: false;
+};
+
+export type FakeSlot = SlotBase & {
+  custom: true;
+  event?: string;
 };
 
 export type SlotWithItem = Slot & {

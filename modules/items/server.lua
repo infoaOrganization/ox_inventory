@@ -82,14 +82,8 @@ local function processServerItem(itemName, itemData)
 end
 
 ---Register one or more items
----@param items table<string, ItemData>|string Either a table of items or a single item name
----@param itemData? ItemData If first param is a string, this is the item data
-local function RegisterItems(items, itemData)
-	-- Handle single item registration: RegisterItems('item_name', {data})
-	if type(items) == 'string' then
-		items = { [items] = itemData }
-	end
-
+---@param items table<string, ItemData>
+local function RegisterItems(items)
 	if not items or type(items) ~= 'table' then
 		return error('RegisterItems: first parameter must be a table or string')
 	end
