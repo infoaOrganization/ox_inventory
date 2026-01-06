@@ -7,7 +7,7 @@ local nextId = 1
 ---@field imageUrl string
 ---@field count? number
 ---@field weight? number
----@field event? string
+---@field event? string|{ name: string, data: userdata }
 
 ---@alias FakeItemProvider fun(): FakeItem[]
 
