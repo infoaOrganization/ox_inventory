@@ -117,7 +117,9 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
     if (timerRef.current) clearTimeout(timerRef.current);
     // Limit click actions to items with "event" property for fake/custom items
     if (item.custom) {
-      onUse(item);
+      if (item.event) {
+        onUse(item);
+      }
       return;
     }
     if (event.ctrlKey && isSlotWithItem(item) && inventoryType !== 'shop' && inventoryType !== 'crafting') {

@@ -17,7 +17,7 @@ export type RealSlot = SlotBase & {
 
 export type FakeSlot = SlotBase & {
   custom: true;
-  event?: string;
+  event?: string | { name: string, data: unknown };
 };
 
 export type SlotWithItem = Slot & {

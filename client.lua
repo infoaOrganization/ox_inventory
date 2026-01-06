@@ -1667,7 +1667,11 @@ end)
 
 RegisterNUICallback('useFakeItem', function(event, cb)
     client.closeInventory()
-    TriggerEvent(event)
+    if type(event) == 'table' then
+        TriggerEvent(event.name, event.data)
+    else
+        TriggerEvent(event)
+    end
 	cb(1)
 end)
 
