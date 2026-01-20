@@ -14,6 +14,7 @@ dependencies {
     'oxmysql',
     'ox_lib',
     'es_extended',
+    'ox_inventory_config',
 }
 
 shared_script '@ox_lib/init.lua'
