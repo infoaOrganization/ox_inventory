@@ -113,14 +113,14 @@ else
     local fallbackmarker = {
         type = 0,
         colour = {150, 150, 150},
-        scale = {0.5, 0.5, 0.5}
+        scale = {1.5, 1.5, 1.5}
     }
 
     client.shopmarker = json.decode(GetConvar('inventory:shopmarker', [[
         {
             "type": 29,
             "colour": [30, 150, 30],
-            "scale": [0.5, 0.5, 0.5]
+            "scale": [1.5, 1.5, 1.5]
         }
     ]])) or fallbackmarker
 
@@ -128,7 +128,7 @@ else
         {
             "type": 2,
             "colour": [30, 30, 150],
-            "scale": [0.3, 0.2, 0.15]
+            "scale": [0.5, 0.4, 0.35]
         }
     ]])) or fallbackmarker
 
@@ -136,7 +136,7 @@ else
         {
             "type": 2,
             "colour": [150, 150, 30],
-            "scale": [0.3, 0.2, 0.15]
+            "scale": [0.5, 0.4, 0.35]
         }
     ]])) or fallbackmarker
 
@@ -144,7 +144,7 @@ else
         {
             "type": 2,
             "colour": [150, 30, 30],
-            "scale": [0.3, 0.2, 0.15]
+            "scale": [0.5, 0.4, 0.35]
         }
     ]])) or fallbackmarker
 end
