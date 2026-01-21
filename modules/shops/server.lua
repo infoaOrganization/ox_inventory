@@ -241,7 +241,6 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
 				if canAfford ~= true then
 					return false, false, canAfford
 				end
-
 				if not TriggerEventHooks('buyItem', {
 					source = source,
 					shopType = shopType,
