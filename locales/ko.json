@@ -54,7 +54,7 @@
   "item_unauthorised": "이 항목을 구매할 권한이 없습니다.",
   "item_unlicensed": "이 항목을 구매할 수 있는 권한이 없습니다.",
   "item_not_enough": "%s이(가) 충분하지 않습니다.",
-  "cannot_afford": "당신은 그것을 감당할 수 없습니다(%s 누락)",
+  "cannot_afford": "당신의 현금 또는 재화가 충분하지 않습니다.(%s 부족)",
   "stash_lowgrade": "이 항목을 가져갈 권한이 없습니다.",
   "cannot_use": "%s을(를) 사용할 수 없습니다.",
   "shop_nostock": "품목이 품절되었습니다",
