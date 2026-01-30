@@ -1,570 +1,570 @@
 return {
 	Weapons = {
 		['WEAPON_BATTLERIFLE'] = {
-			label = 'Battle Rifle',
+			label = '전투 소총',
 			weight = 3300,
 			durability = 0.03,
 			ammoname = 'ammo-rifle2',
 		},
 
 		['WEAPON_SNOWLAUNCHER'] = {
-			label = 'Snowball Launcher',
+			label = '눈덩이 발사기',
 			weight = 1000,
 			durability = 0.03,
 			ammoname = 'WEAPON_SNOWBALL',
 		},
 
 		['WEAPON_TECPISTOL'] = {
-			label = 'Tactical SMG',
+			label = '전술 기관단총',
 			weight = 1500,
 			durability = 0.075,
 			ammoname = 'ammo-9',
 		},
 
 		['WEAPON_ADVANCEDRIFLE'] = {
-			label = 'Advanced Rifle',
+			label = '고급 소총',
 			weight = 3100,
 			durability = 0.03,
 			ammoname = 'ammo-rifle',
 		},
 
 		['WEAPON_APPISTOL'] = {
-			label = 'AP Pistol',
+			label = '철갑탄 권총',
 			weight = 1400,
 			durability = 0.1,
 			ammoname = 'ammo-9',
 		},
 
 		['WEAPON_ASSAULTRIFLE'] = {
-			label = 'Assault Rifle',
+			label = '돌격 소총',
 			weight = 4500,
 			durability = 0.03,
 			ammoname = 'ammo-rifle2',
 		},
 
 		['WEAPON_ASSAULTRIFLE_MK2'] = {
-			label = 'Assault Rifle MK2',
+			label = '돌격 소총 MK2',
 			weight = 2950,
 			durability = 0.03,
 			ammoname = 'ammo-rifle2',
 		},
 
 		['WEAPON_ASSAULTSHOTGUN'] = {
-			label = 'Assault Shotgun',
+			label = '돌격 산탄총',
 			weight = 5200,
 			durability = 0.05,
 			ammoname = 'ammo-shotgun'
 		},
 
 		['WEAPON_ASSAULTSMG'] = {
-			label = 'Assault SMG',
+			label = '돌격 기관단총',
 			weight = 2900,
 			durability = 0.05,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_BALL'] = {
-			label = 'Ball',
+			label = '공',
 			weight = 149,
 			throwable = true,
 		},
 
 		['WEAPON_BAT'] = {
-			label = 'Bat',
+			label = '야구 방망이',
 			weight = 1134,
 			durability = 0.1,
 		},
 
 		['WEAPON_BATTLEAXE'] = {
-			label = 'Battle Axe',
+			label = '전투 도끼',
 			weight = 6500,
 			durability = 0.1,
 		},
 
 		['WEAPON_BOTTLE'] = {
-			label = 'Bottle',
+			label = '병',
 			weight = 350,
 			durability = 0.1,
 		},
 
 		['WEAPON_BULLPUPRIFLE'] = {
-			label = 'Bullpup Rifle',
+			label = '불펍 소총',
 			weight = 2900,
 			durability = 0.03,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_BULLPUPRIFLE_MK2'] = {
-			label = 'Bullpup Rifle MK2',
+			label = '불펍 소총 MK2',
 			weight = 2900,
 			durability = 0.03,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_BULLPUPSHOTGUN'] = {
-			label = 'Bullpup Shotgun',
+			label = '불펍 산탄총',
 			weight = 3100,
 			durability = 0.2,
 			ammoname = 'ammo-shotgun'
 		},
 
 		['WEAPON_BZGAS'] = {
-			label = 'BZ Gas',
+			label = 'BZ 가스',
 			weight = 600,
 			throwable = true,
 		},
 
 		['WEAPON_CARBINERIFLE'] = {
-			label = 'Carbine Rifle',
+			label = '카빈 소총',
 			weight = 3100,
 			durability = 0.03,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_CARBINERIFLE_MK2'] = {
-			label = 'Carbine Rifle MK2',
+			label = '카빈 소총 MK2',
 			weight = 3000,
 			durability = 0.03,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_CERAMICPISTOL'] = {
-			label = 'Ceramic Pistol',
+			label = '세라믹 권총',
 			weight = 800,
 			durability = 0.2,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_PISTOLXM3'] = {
-			label = 'WM 29 Pistol',
+			label = 'WM 29 권총',
 			weight = 969,
 			durability = 0.2,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_COMBATMG'] = {
-			label = 'Combat MG',
+			label = '전투 기관총',
 			weight = 7500,
 			durability = 0.02,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_COMBATMG_MK2'] = {
-			label = 'Combat MG MK2',
+			label = '전투 기관총 MK2',
 			weight = 8000,
 			durability = 0.02,
 			ammoname = 'ammo-rifle2'
 		},
 
 		['WEAPON_COMBATPDW'] = {
-			label = 'Combat PDW',
+			label = '전투 PDW',
 			weight = 2300,
 			durability = 0.1,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_COMBATPISTOL'] = {
-			label = 'Combat Pistol',
+			label = '전투 권총',
 			weight = 785,
 			durability = 0.2,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_COMBATSHOTGUN'] = {
-			label = 'Combat Shotgun',
+			label = '전투 산탄총',
 			weight = 4400,
 			durability = 0.2,
 			ammoname = 'ammo-shotgun'
 		},
 
 		['WEAPON_COMPACTLAUNCHER'] = {
-			label = 'Compact Grenade Launcher',
+			label = '소형 유탄 발사기',
 			weight = 2500,
 			durability = 0.05,
 			ammoname = 'ammo-grenade'
 		},
 
 		['WEAPON_COMPACTRIFLE'] = {
-			label = 'Compact Rifle',
+			label = '소형 소총',
 			weight = 3600,
 			durability = 0.05,
 			ammoname = 'ammo-rifle2'
 		},
 
 		['WEAPON_CROWBAR'] = {
-			label = 'Crowbar',
+			label = '쇠지렛대',
 			weight = 2500,
 			durability = 0.1,
 		},
 
 		['WEAPON_DAGGER'] = {
-			label = 'Dagger',
+			label = '단검',
 			weight = 800,
 			durability = 0.1,
 		},
 
 		['WEAPON_DBSHOTGUN'] = {
-			label = 'Double Barrel Shotgun',
+			label = '이중 총신 산탄총',
 			weight = 3175,
 			durability = 0.4,
 			ammoname = 'ammo-shotgun'
 		},
 
 		['WEAPON_DOUBLEACTION'] = {
-			label = 'Double Action Revolver',
+			label = '더블액션 리볼버',
 			weight = 940,
 			durability = 0.2,
 			ammoname = 'ammo-38'
 		},
 
 		['WEAPON_EMPLAUNCHER'] = {
-			label = 'Compact EMP Launcher',
+			label = '소형 EMP 발사기',
 			weight = 2750,
 			durability = 0.2,
 			ammoname = 'ammo-emp'
 		},
 
 		['WEAPON_FIREEXTINGUISHER'] = {
-			label = 'Fire Extinguisher',
+			label = '소화기',
 			weight = 8616,
             durability = 0.006
 		},
 
 		['WEAPON_FIREWORK'] = {
-			label = 'Firework Launcher',
+			label = '불꽃놀이 발사기',
 			weight = 1000,
 			durability = 0.5,
 			ammoname = 'ammo-firework'
 		},
 
 		['WEAPON_FLARE'] = {
-			label = 'Flare',
+			label = '조명탄',
 			weight = 250,
 			throwable = true,
 		},
 
 		['WEAPON_FLAREGUN'] = {
-			label = 'Flare Gun',
+			label = '신호탄 총',
 			weight = 1000,
 			durability = 0.5,
 			ammoname = 'ammo-flare'
 		},
 
 		['WEAPON_FLASHLIGHT'] = {
-			label = 'Flashlight',
+			label = '손전등',
 			weight = 125,
 			durability = 0.1,
 		},
 
 		['WEAPON_GOLFCLUB'] = {
-			label = 'Golf Club',
+			label = '골프 클럽',
 			weight = 330,
 			durability = 0.1,
 		},
 
 		['WEAPON_GRENADE'] = {
-			label = 'Grenade',
+			label = '수류탄',
 			weight = 400,
 			throwable = true,
 		},
 
 		['WEAPON_GRENADELAUNCHER'] = {
-			label = 'Grenade Launcher',
+			label = '유탄 발사기',
 			weight = 6500,
 			durability = 0.05,
 			ammoname = 'ammo-grenade'
 		},
 
 		['WEAPON_GUSENBERG'] = {
-			label = 'Gusenberg',
+			label = '구센버그',
 			weight = 4900,
 			durability = 0.04,
 			ammoname = 'ammo-45'
 		},
 
 		['WEAPON_HAMMER'] = {
-			label = 'Hammer',
+			label = '망치',
 			weight = 1200,
 			durability = 0.1,
 		},
 
 		['WEAPON_HATCHET'] = {
-			label = 'Hatchet',
+			label = '손도끼',
 			weight = 1000,
 			durability = 0.1,
 		},
 
 		['WEAPON_HEAVYRIFLE'] = {
-			label = 'Heavy Rifle',
+			label = '중형 소총',
 			weight = 3300,
 			durability = 0.2,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_HAZARDCAN'] = {
-			label = 'Hazard Can',
+			label = '위험물 통',
 			weight = 12000,
 		},
 
 		['WEAPON_METALDETECTOR'] = {
-			label = 'Metal Detector',
+			label = '금속 탐지기',
 			weight = 1200,
 		},
 
 		['WEAPON_HOMINGLAUNCHER'] = {
-			label = 'Homing Launcher',
+			label = '유도 미사일 발사기',
 			weight = 10000,
 			durability = 0.6,
 			ammoname = 'ammo-rocket'
 		},
 
 		['WEAPON_FERTILIZERCAN'] = {
-			label = 'Fertilizer Can',
+			label = '비료 통',
 			weight = 12000,
 		},
 
 		['WEAPON_HEAVYPISTOL'] = {
-			label = 'Heavy Pistol',
+			label = '중형 권총',
 			weight = 1100,
 			durability = 0.2,
 			ammoname = 'ammo-45'
 		},
 
 		['WEAPON_HEAVYSHOTGUN'] = {
-			label = 'Heavy Shotgun',
+			label = '중형 산탄총',
 			weight = 3600,
 			durability = 0.1,
 			ammoname = 'ammo-shotgun'
 		},
 
 		['WEAPON_HEAVYSNIPER'] = {
-			label = 'Heavy Sniper',
+			label = '중형 저격총',
 			weight = 12700,
 			durability = 0.5,
 			ammoname = 'ammo-heavysniper'
 		},
 
 		['WEAPON_HEAVYSNIPER_MK2'] = {
-			label = 'Heavy Sniper MK2',
+			label = '중형 저격총 MK2',
 			weight = 14000,
 			durability = 0.5,
 			ammoname = 'ammo-heavysniper'
 		},
 
 		['WEAPON_KNIFE'] = {
-			label = 'Knife',
+			label = '칼',
 			weight = 300,
 			durability = 0.1,
 		},
 
 		['WEAPON_KNUCKLE'] = {
-			label = 'Knuckle Dusters',
+			label = '너클',
 			weight = 300,
 			durability = 0.1,
 		},
 
 		['WEAPON_MACHETE'] = {
-			label = 'Machete',
+			label = '마체테',
 			weight = 1000,
 			durability = 0.1,
 		},
 
 		['WEAPON_MACHINEPISTOL'] = {
-			label = 'Machine Pistol',
+			label = '기관 권총',
 			weight = 1400,
 			durability = 0.05,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_MARKSMANPISTOL'] = {
-			label = 'Marksman Pistol',
+			label = '명사수 권총',
 			weight = 1588,
 			durability = 0.5,
 			ammoname = 'ammo-22'
 		},
 
 		['WEAPON_MARKSMANRIFLE'] = {
-			label = 'Marksman Rifle',
+			label = '명사수 소총',
 			weight = 7500,
 			durability = 0.4,
 			ammoname = 'ammo-sniper'
 		},
 
 		['WEAPON_MARKSMANRIFLE_MK2'] = {
-			label = 'Marksman Rifle MK2',
+			label = '명사수 소총 MK2',
 			weight = 4000,
 			durability = 0.4,
 			ammoname = 'ammo-sniper'
 		},
 
 		['WEAPON_MG'] = {
-			label = 'Machine Gun',
+			label = '기관총',
 			weight = 9000,
 			durability = 0.02,
 			ammoname = 'ammo-rifle2'
 		},
 
 		['WEAPON_MINIGUN'] = {
-			label = 'Minigun',
+			label = '미니건',
 			weight = 38500,
 			durability = 0.1,
 			ammoname = 'ammo-rifle2'
 		},
 
 		['WEAPON_MICROSMG'] = {
-			label = 'Micro SMG',
+			label = '마이크로 기관단총',
 			weight = 3000,
 			durability = 0.1,
 			ammoname = 'ammo-45'
 		},
 
 		['WEAPON_MILITARYRIFLE'] = {
-			label = 'Military Rifle',
+			label = '군용 소총',
 			weight = 3600,
 			durability = 0.03,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_MINISMG'] = {
-			label = 'Mini SMG',
+			label = '미니 기관단총',
 			weight = 1270,
 			durability = 0.05,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_MOLOTOV'] = {
-			label = 'Molotov',
+			label = '화염병',
 			weight = 1800,
 			throwable = true,
 		},
 
 		['WEAPON_MUSKET'] = {
-			label = 'Musket',
+			label = '머스킷',
 			weight = 4500,
 			durability = 0.5,
 			ammoname = 'ammo-musket'
 		},
 
 		['WEAPON_NAVYREVOLVER'] = {
-			label = 'Navy Revolver',
+			label = '해군 리볼버',
 			weight = 4000,
 			durability = 0.2,
 			ammoname = 'ammo-44'
 		},
 
 		['WEAPON_NIGHTSTICK'] = {
-			label = 'Nightstick',
+			label = '경찰봉',
 			weight = 1000,
 			durability = 0.1,
 		},
 
 		['WEAPON_PETROLCAN'] = {
-			label = 'Jerry Can',
+			label = '제리캔',
 			weight = 4000,
 		},
 
 		['WEAPON_GADGETPISTOL'] = {
-			label = 'Perico Pistol',
+			label = '페리코 권총',
 			weight = 1750,
 			durability = 0.1,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_PIPEBOMB'] = {
-			label = 'Pipe Bomb',
+			label = '파이프 폭탄',
 			weight = 1800,
 			throwable = true,
 		},
 
 		['WEAPON_PISTOL'] = {
-			label = 'Pistol',
+			label = '권총',
 			weight = 1130,
 			durability = 0.1,
 			ammoname = 'ammo-9',
 		},
 
 		['WEAPON_PISTOL50'] = {
-			label = 'Pistol .50',
+			label = '권총 .50',
 			weight = 2000,
 			durability = 0.1,
 			ammoname = 'ammo-50'
 		},
 
 		['WEAPON_PISTOL_MK2'] = {
-			label = 'Pistol MK2',
+			label = '권총 MK2',
 			weight = 1000,
 			durability = 0.5,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_POOLCUE'] = {
-			label = 'Pool Cue',
+			label = '당구 큐',
 			weight = 146,
 			durability = 0.1,
 		},
 
 		['WEAPON_CANDYCANE'] = {
-			label = 'Candy Cane',
+			label = '사탕 지팡이',
 			weight = 85,
 			durability = 0.1,
 		},
 
 		['WEAPON_PROXMINE'] = {
-			label = 'Proximity Mine',
+			label = '근접 지뢰',
 			weight = 2500,
 			throwable = true,
 		},
 
 		['WEAPON_PUMPSHOTGUN'] = {
-			label = 'Pump Shotgun',
+			label = '펌프 산탄총',
 			weight = 3400,
 			durability = 0.1,
 			ammoname = 'ammo-shotgun'
 		},
 
 		['WEAPON_PUMPSHOTGUN_MK2'] = {
-			label = 'Pump Shotgun MK2',
+			label = '펌프 산탄총 MK2',
 			weight = 3200,
 			durability = 0.1,
 			ammoname = 'ammo-shotgun'
 		},
 
 		['WEAPON_RAILGUN'] = {
-			label = 'Railgun',
+			label = '레일건',
 			weight = 3570,
 			durability = 0.5,
 			ammoname = 'ammo-railgun'
 		},
 
 		['WEAPON_RAILGUNXM3'] = {
-			label = 'Railgun XM3',
+			label = '레일건 XM3',
 			weight = 3570,
 			durability = 0.5,
 			ammoname = 'ammo-railgun'
 		},
 
 		['WEAPON_RAYCARBINE'] = {
-			label = 'Unholy Hellbringer',
+			label = '언홀리 헬브링어',
 			weight = 3620,
 			durability = 0.2,
 			ammoname = 'ammo-laser'
 		},
 
 		['WEAPON_RAYPISTOL'] = {
-			label = 'Up-n-Atomizer',
+			label = '업앤아토마이저',
 			weight = 1540,
 			durability = 0.5
 		},
 
 		['WEAPON_REVOLVER'] = {
-			label = 'Revolver',
+			label = '리볼버',
 			weight = 2260,
 			durability = 0.1,
 			ammoname = 'ammo-44'
 		},
 
 		['WEAPON_REVOLVER_MK2'] = {
-			label = 'Revolver MK2',
+			label = '리볼버 MK2',
 			weight = 2600,
 			durability = 0.1,
 			ammoname = 'ammo-44'
@@ -578,141 +578,141 @@ return {
 		},
 
 		['WEAPON_SAWNOFFSHOTGUN'] = {
-			label = 'Sawn Off Shotgun',
+			label = '소드오프 산탄총',
 			weight = 2380,
 			durability = 0.1,
 			ammoname = 'ammo-shotgun'
 		},
 
 		['WEAPON_SMG'] = {
-			label = 'SMG',
+			label = '기관단총',
 			weight = 3084,
 			durability = 0.8,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_SMG_MK2'] = {
-			label = 'SMG Mk2',
+			label = '기관단총 MK2',
 			weight = 2700,
 			durability = 0.05,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_SMOKEGRENADE'] = {
-			label = 'Smoke Grenade',
+			label = '연막탄',
 			weight = 600,
 			throwable = true,
 		},
 
 		['WEAPON_SNIPERRIFLE'] = {
-			label = 'Sniper Rifle',
+			label = '저격 소총',
 			weight = 5000,
 			durability = 0.5,
 			ammoname = 'ammo-sniper'
 		},
 
 		['WEAPON_SNOWBALL'] = {
-			label = 'Snow Ball',
+			label = '눈덩이',
 			weight = 5,
 			throwable = true,
 		},
 
 		['WEAPON_SNSPISTOL'] = {
-			label = 'SNS Pistol',
+			label = 'SNS 권총',
 			weight = 465,
 			durability = 0.1,
 			ammoname = 'ammo-45'
 		},
 
 		['WEAPON_SNSPISTOL_MK2'] = {
-			label = 'SNS Pistol MK2',
+			label = 'SNS 권총 MK2',
 			weight = 465,
 			durability = 0.1,
 			ammoname = 'ammo-45'
 		},
 
 		['WEAPON_SPECIALCARBINE'] = {
-			label = 'Special Carbine',
+			label = '특수 카빈총',
 			weight = 3000,
 			durability = 0.03,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_SPECIALCARBINE_MK2'] = {
-			label = 'Special Carbine MK2',
+			label = '특수 카빈총 MK2',
 			weight = 3370,
 			durability = 0.03,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_STICKYBOMB'] = {
-			label = 'Sticky Bomb',
+			label = '접착 폭탄',
 			weight = 1000,
 			throwable = true,
 		},
 
 		['WEAPON_STONE_HATCHET'] = {
-			label = 'Stone Hatchet',
+			label = '돌도끼',
 			weight = 800,
 			durability = 0.1,
 		},
 
 		['WEAPON_STUNGUN'] = {
-			label = 'Tazer',
+			label = '테이저',
 			weight = 227,
 			durability = 0.1,
 		},
 
 		['WEAPON_AUTOSHOTGUN'] = {
-			label = 'Sweeper Shotgun',
+			label = '스위퍼 산탄총',
 			weight = 4400,
 			durability = 0.05,
 			ammoname = 'ammo-shotgun'
 		},
 
 		['WEAPON_SWITCHBLADE'] = {
-			label = 'Switchblade',
+			label = '스위치블레이드',
 			weight = 300,
 			durability = 0.1,
 			anim = { 'anim@melee@switchblade@holster', 'unholster', 200, 'anim@melee@switchblade@holster', 'holster', 600 },
 		},
 
 		['WEAPON_VINTAGEPISTOL'] = {
-			label = 'Vintage Pistol',
+			label = '빈티지 권총',
 			weight = 700,
 			durability = 0.1,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_RAYMINIGUN'] = {
-			label = 'Widowmaker',
+			label = '위도우메이커',
 			weight = 7000,
 			durability = 0.1,
 			ammoname = 'ammo-laser'
 		},
 
 		['WEAPON_WRENCH'] = {
-			label = 'Wrench',
+			label = '렌치',
 			weight = 2500,
 			durability = 0.1,
 		},
 
 		['WEAPON_PRECISIONRIFLE'] = {
-			label = 'Precision Rifle',
+			label = '정밀 소총',
 			weight = 4800,
 			durability = 0.4,
 			ammoname = 'ammo-sniper'
 		},
 
 		['WEAPON_TACTICALRIFLE'] = {
-			label = 'Tactical Rifle',
+			label = '전술 소총',
 			weight = 3400,
 			durability = 0.03,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_TEARGAS'] = {
-			label = 'Tear Gas',
+			label = '최루 가스',
 			weight = 600,
 			throwable = true,
 		},
@@ -720,7 +720,7 @@ return {
 
 	Components = {
 		['at_flashlight'] = {
-			label = 'Tactical Flashlight',
+			label = '전술 손전등',
 			weight = 120,
 			type = 'flashlight',
 			client = {
@@ -736,7 +736,7 @@ return {
 		},
 
 		['at_suppressor_light'] = {
-			label = 'Suppressor',
+			label = '소음기',
 			weight = 280,
 			type = 'muzzle',
 			client = {
@@ -752,7 +752,7 @@ return {
 		},
 
 		['at_suppressor_heavy'] = {
-			label = 'Tactical Suppressor',
+			label = '전술 소음기',
 			weight = 280,
 			type = 'muzzle',
 			client = {
@@ -768,7 +768,7 @@ return {
 		},
 
 		['at_grip'] = {
-			label = 'Grip',
+			label = '그립',
 			type = 'grip',
 			weight = 280,
 			client = {
@@ -781,7 +781,7 @@ return {
 		},
 
 		['at_barrel'] = {
-			label = 'Heavy Barrel',
+			label = '헤비 총열',
 			type = 'barrel',
 			weight = 280,
 			client = {
@@ -800,7 +800,7 @@ return {
 		},
 
 		['at_clip_extended_pistol'] = {
-			label = 'Extended Pistol Clip',
+			label = '확장 권총 탄창',
 			type = 'magazine',
 			weight = 280,
 			client = {
@@ -823,7 +823,7 @@ return {
 		},
 
 		['at_clip_extended_smg'] = {
-			label = 'Extended SMG Clip',
+			label = '확장 기관단총 탄창',
 			type = 'magazine',
 			weight = 280,
 			client = {
@@ -842,7 +842,7 @@ return {
 		},
 
 		['at_clip_extended_shotgun'] = {
-			label = 'Extended Shotgun Clip',
+			label = '확장 산탄총 탄창',
 			type = 'magazine',
 			weight = 280,
 			client = {
@@ -856,7 +856,7 @@ return {
 		},
 
 		['at_clip_extended_rifle'] = {
-			label = 'Extended Rifle Clip',
+			label = '확장 소총 탄창',
 			type = 'magazine',
 			weight = 280,
 			client = {
@@ -882,7 +882,7 @@ return {
 		},
 
 		['at_clip_extended_mg'] = {
-			label = 'Extended MG Clip',
+			label = '확장 기관총 탄창',
 			type = 'magazine',
 			weight = 280,
 			client = {
@@ -898,7 +898,7 @@ return {
 		},
 
 		['at_clip_extended_sniper'] = {
-			label = 'Extended Sniper Clip',
+			label = '확장 저격총 탄창',
 			type = 'magazine',
 			weight = 280,
 			client = {
@@ -913,7 +913,7 @@ return {
 		},
 
 		['at_clip_drum_smg'] = {
-			label = 'SMG Drum',
+			label = '기관단총 드럼 탄창',
 			type = 'magazine',
 			weight = 280,
 			client = {
@@ -928,7 +928,7 @@ return {
 		},
 
 		['at_clip_drum_shotgun'] = {
-			label = 'Shotgun Drum',
+			label = '산탄총 드럼 탄창',
 			type = 'magazine',
 			weight = 280,
 			client = {
@@ -941,7 +941,7 @@ return {
 		},
 
 		['at_clip_drum_rifle'] = {
-			label = 'Rifle Drum',
+			label = '소총 드럼 탄창',
 			type = 'magazine',
 			weight = 280,
 			client = {
@@ -957,7 +957,7 @@ return {
 		},
 
 		['at_compensator'] = {
-			label = 'Compensator',
+			label = '컴펜세이터',
 			type = 'muzzle',
 			weight = 280,
 			client = {
@@ -971,7 +971,7 @@ return {
 		},
 
 		['at_scope_macro'] = {
-			label = 'Macro Scope',
+			label = '매크로 스코프',
 			type = 'sight',
 			weight = 280,
 			client = {
@@ -987,7 +987,7 @@ return {
 		},
 
 		['at_scope_small'] = {
-			label = 'Small Scope',
+			label = '소형 스코프',
 			type = 'sight',
 			weight = 280,
 			client = {
@@ -1002,7 +1002,7 @@ return {
 		},
 
 		['at_scope_medium'] = {
-			label = 'Medium Scope',
+			label = '중형 스코프',
 			type = 'sight',
 			weight = 280,
 			client = {
@@ -1015,7 +1015,7 @@ return {
 		},
 
 		['at_scope_large'] = {
-			label = 'Large Scope',
+			label = '대형 스코프',
 			type = 'sight',
 			weight = 280,
 			client = {
@@ -1027,7 +1027,7 @@ return {
 		},
 
 		['at_scope_advanced'] = {
-			label = 'Advanced Scope',
+			label = '고급 스코프',
 			type = 'sight',
 			weight = 280,
 			client = {
@@ -1039,7 +1039,7 @@ return {
 		},
 
 		['at_scope_nv'] = {
-			label = 'NV Scope',
+			label = '야시 스코프',
 			type = 'sight',
 			weight = 420,
 			client = {
@@ -1051,7 +1051,7 @@ return {
 		},
 
 		['at_scope_thermal'] = {
-			label = 'Thermal Scope',
+			label = '열화상 스코프',
 			type = 'sight',
 			weight = 420,
 			client = {
@@ -1063,7 +1063,7 @@ return {
 		},
 
 		['at_scope_holo'] = {
-			label = 'Holographic Sight',
+			label = '홀로그래픽 사이트',
 			type = 'sight',
 			weight = 280,
 			client = {
@@ -1078,7 +1078,7 @@ return {
 		},
 
 		['at_muzzle_flat'] = {
-			label = 'Flat Muzzle',
+			label = '플랫 총구',
 			type = 'muzzle',
 			weight = 80,
 			client = {
@@ -1090,7 +1090,7 @@ return {
 		},
 
 		['at_muzzle_tactical'] = {
-			label = 'Tactical Muzzle',
+			label = '전술 총구',
 			type = 'muzzle',
 			weight = 80,
 			client = {
@@ -1102,7 +1102,7 @@ return {
 		},
 
 		['at_muzzle_fat'] = {
-			label = 'Fat Muzzle',
+			label = '팻 총구',
 			type = 'muzzle',
 			weight = 80,
 			client = {
@@ -1114,7 +1114,7 @@ return {
 		},
 
 		['at_muzzle_precision'] = {
-			label = 'Precision Muzzle',
+			label = '정밀 총구',
 			type = 'muzzle',
 			weight = 80,
 			client = {
@@ -1126,7 +1126,7 @@ return {
 		},
 
 		['at_muzzle_heavy'] = {
-			label = 'Heavy Muzzle',
+			label = '헤비 총구',
 			type = 'muzzle',
 			weight = 80,
 			client = {
@@ -1138,7 +1138,7 @@ return {
 		},
 
 		['at_muzzle_slanted'] = {
-			label = 'Slanted Muzzle',
+			label = '경사 총구',
 			type = 'muzzle',
 			weight = 80,
 			client = {
@@ -1150,7 +1150,7 @@ return {
 		},
 
 		['at_muzzle_split'] = {
-			label = 'Split Muzzle',
+			label = '분할 총구',
 			type = 'muzzle',
 			weight = 80,
 			client = {
@@ -1162,7 +1162,7 @@ return {
 		},
 
 		['at_muzzle_squared'] = {
-			label = 'Squared Muzzle',
+			label = '사각 총구',
 			type = 'muzzle',
 			weight = 80,
 			client = {
@@ -1174,7 +1174,7 @@ return {
 		},
 
 		['at_muzzle_bell'] = {
-			label = 'Bell Muzzle',
+			label = '벨 총구',
 			type = 'muzzle',
 			weight = 80,
 			client = {
@@ -1186,7 +1186,7 @@ return {
 		},
 
 		['at_skin_luxe'] = {
-			label = 'Luxury Weapon Kit',
+			label = '럭셔리 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1207,7 +1207,7 @@ return {
 		},
 
 		['at_skin_wood'] = {
-			label = 'Wood Weapon Kit',
+			label = '우드 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1221,7 +1221,7 @@ return {
 		},
 
 		['at_skin_metal'] = {
-			label = 'Metal Weapon Kit',
+			label = '메탈 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1237,7 +1237,7 @@ return {
 		},
 
 		['at_skin_pearl'] = {
-			label = 'Pearl Weapon Kit',
+			label = '펄 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1249,7 +1249,7 @@ return {
 		},
 
 		['at_skin_ballas'] = {
-			label = 'Ballas Weapon Kit',
+			label = '발라스 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1261,7 +1261,7 @@ return {
 		},
 
 		['at_skin_diamond'] = {
-			label = 'Diamond Weapon Kit',
+			label = '다이아몬드 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1273,7 +1273,7 @@ return {
 		},
 
 		['at_skin_dollar'] = {
-			label = 'Dollar Weapon Kit',
+			label = '달러 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1285,7 +1285,7 @@ return {
 		},
 
 		['at_skin_hate'] = {
-			label = 'Hate Weapon Kit',
+			label = '헤이트 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1297,7 +1297,7 @@ return {
 		},
 
 		['at_skin_king'] = {
-			label = 'King Weapon Kit',
+			label = '킹 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1309,7 +1309,7 @@ return {
 		},
 
 		['at_skin_love'] = {
-			label = 'Love Weapon Kit',
+			label = '러브 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1321,7 +1321,7 @@ return {
 		},
 
 		['at_skin_pimp'] = {
-			label = 'Pimp Weapon Kit',
+			label = '핌프 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1333,7 +1333,7 @@ return {
 		},
 
 		['at_skin_player'] = {
-			label = 'Player Weapon Kit',
+			label = '플레이어 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1345,7 +1345,7 @@ return {
 		},
 
 		['at_skin_vagos'] = {
-			label = 'Vagos Weapon Kit',
+			label = '바고스 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1357,7 +1357,7 @@ return {
 		},
 
 		['at_skin_blagueurs'] = {
-			label = 'Blagueurs Weapon Kit',
+			label = '블라게르 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1369,7 +1369,7 @@ return {
 		},
 
 		['at_skin_splatter'] = {
-			label = 'Splatter Weapon Kit',
+			label = '스플래터 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1381,7 +1381,7 @@ return {
 		},
 
 		['at_skin_bulletholes'] = {
-			label = 'Bullet Holes Weapon Kit',
+			label = '총알 자국 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1393,7 +1393,7 @@ return {
 		},
 
 		['at_skin_burgershot'] = {
-			label = 'Burger Shot Weapon Kit',
+			label = '버거샷 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1405,7 +1405,7 @@ return {
 		},
 
 		['at_skin_cluckinbell'] = {
-			label = 'Cluckin Bell Weapon Kit',
+			label = '클러킨벨 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1417,7 +1417,7 @@ return {
 		},
 
 		['at_skin_fatalincursion'] = {
-			label = 'Fatal Incursion Weapon Kit',
+			label = '치명적 침입 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1429,7 +1429,7 @@ return {
 		},
 
 		['at_skin_luchalibre'] = {
-			label = 'Lucha Libre Weapon Kit',
+			label = '루차 리브레 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1441,7 +1441,7 @@ return {
 		},
 
 		['at_skin_trippy'] = {
-			label = 'Trippy Weapon Kit',
+			label = '환각 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1453,7 +1453,7 @@ return {
 		},
 
 		['at_skin_tiedye'] = {
-			label = 'Tie-Dye Weapon Kit',
+			label = '타이다이 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1465,7 +1465,7 @@ return {
 		},
 
 		['at_skin_wall'] = {
-			label = 'Wall Weapon Kit',
+			label = '월 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1477,7 +1477,7 @@ return {
 		},
 
 		['at_skin_vip'] = {
-			label = 'VIP Weapon Kit',
+			label = 'VIP 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1490,7 +1490,7 @@ return {
 		},
 
 		['at_skin_bodyguard'] = {
-			label = 'Bodyguard Weapon Kit',
+			label = '보디가드 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1503,7 +1503,7 @@ return {
 		},
 
 		['at_skin_festive'] = {
-			label = 'Festive Weapon Kit',
+			label = '축제 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1515,7 +1515,7 @@ return {
 		},
 
 		['at_skin_security'] = {
-			label = 'Security Weapon Kit',
+			label = '보안 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1528,7 +1528,7 @@ return {
 		},
 
 		['at_skin_camo'] = {
-			label = 'Camo Weapon Kit',
+			label = '카모 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1551,7 +1551,7 @@ return {
 		},
 
 		['at_skin_brushstroke'] = {
-			label = 'Brushstroke Weapon Kit',
+			label = '붓터치 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1574,7 +1574,7 @@ return {
 		},
 
 		['at_skin_woodland'] = {
-			label = 'Woodland Weapon Kit',
+			label = '숲 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1597,7 +1597,7 @@ return {
 		},
 
 		['at_skin_skull'] = {
-			label = 'Skull Weapon Kit',
+			label = '해골 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1620,7 +1620,7 @@ return {
 		},
 
 		['at_skin_sessanta'] = {
-			label = 'Sessanta Weapon Kit',
+			label = '세산타 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1643,7 +1643,7 @@ return {
 		},
 
 		['at_skin_perseus'] = {
-			label = 'Perseus Weapon Kit',
+			label = '페르세우스 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1666,7 +1666,7 @@ return {
 		},
 
 		['at_skin_leopard'] = {
-			label = 'Leopard Weapon Kit',
+			label = '레오파드 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1689,7 +1689,7 @@ return {
 		},
 
 		['at_skin_zebra'] = {
-			label = 'Zebra Weapon Kit',
+			label = '얼룩말 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1712,7 +1712,7 @@ return {
 		},
 
 		['at_skin_geometric'] = {
-			label = 'Geometric Weapon Kit',
+			label = '기하학 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1735,7 +1735,7 @@ return {
 		},
 
 		['at_skin_boom'] = {
-			label = 'Boom Weapon Kit',
+			label = '붐 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1758,7 +1758,7 @@ return {
 		},
 
 		['at_skin_patriotic'] = {
-			label = 'Patriotic Weapon Kit',
+			label = '애국 무기 키트',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1783,7 +1783,7 @@ return {
 
 	Ammo = {
 		['ammo-22'] = {
-			label = '.22 Long Rifle',
+			label = '.22 롱 라이플',
 			weight = 3,
 		},
 
@@ -1793,7 +1793,7 @@ return {
 		},
 
 		['ammo-44'] = {
-			label = '.44 Magnum',
+			label = '.44 매그넘',
 			weight = 16,
 		},
 
@@ -1813,17 +1813,17 @@ return {
 		},
 
 		['ammo-firework'] = {
-			label = 'Firework',
+			label = '불꽃',
 			weight = 200,
 		},
 
 		['ammo-flare'] = {
-			label = 'Flare round',
+			label = '신호탄',
 			weight = 38,
 		},
 
 		['ammo-grenade'] = {
-			label = '40mm Explosive',
+			label = '40mm 폭발탄',
 			weight = 400,
 		},
 
@@ -1833,17 +1833,17 @@ return {
 		},
 
 		['ammo-laser'] = {
-			label = 'Laser charge',
+			label = '레이저 충전',
 			weight = 1,
 		},
 
 		['ammo-musket'] = {
-			label = '.50 Ball',
+			label = '.50 볼',
 			weight = 38,
 		},
 
 		['ammo-railgun'] = {
-			label = 'Railgun charge',
+			label = '레일건 충전',
 			weight = 150,
 		},
 
@@ -1858,12 +1858,12 @@ return {
 		},
 
 		['ammo-rocket'] = {
-			label = 'Rocket',
+			label = '로켓',
 			weight = 500,
 		},
 
 		['ammo-shotgun'] = {
-			label = '12 Gauge',
+			label = '12 게이지',
 			weight = 38,
 		},
 
@@ -1873,7 +1873,7 @@ return {
 		},
 
 		['ammo-emp'] = {
-			label = 'EMP round',
+			label = 'EMP 탄',
 			weight = 400,
 		},
 	}
