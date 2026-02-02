@@ -8,7 +8,7 @@ import { useIntersection } from '../../hooks/useIntersection';
 
 const PAGE_SIZE = 30;
 
-const InventoryGrid: React.FC<{ inventory: Inventory, isDrop: boolean | undefined, labelPrefix: string | undefined }> = ({ inventory, isDrop, labelPrefix }) => {
+const InventoryGrid: React.FC<{ inventory: Inventory, isDrop?: boolean, labelPrefix?: string }> = ({ inventory, isDrop, labelPrefix }) => {
   const weight = useMemo(
     () => (inventory.maxWeight !== undefined ? Math.floor(getTotalWeight(inventory.items) * 1000) / 1000 : 0),
     [inventory.maxWeight, inventory.items]
