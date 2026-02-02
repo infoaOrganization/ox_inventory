@@ -41,7 +41,7 @@ const InventoryControl: React.FC = () => {
       <div className="inventory-control">
         <div className="inventory-control-wrapper">
           <div className="control-input-desc">
-            사용할 개수
+            개수 입력
           </div>
           <input
             className="inventory-control-input"
