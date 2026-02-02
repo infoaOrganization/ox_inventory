@@ -3,6 +3,7 @@ $textColor: #c1c2c5;
 $mainFont: Roboto;
 
 $secondaryColor: rgba(12, 12, 12, 0.4);
+$dropColor: rgba(93, 15, 15, 0.4);
 $secondaryColorHighlight: #33343F;
 $secondaryColorLight: rgba(0, 0, 0, 0.5);
 $secondaryColorDark: rgba(12, 12, 12, 0.8);
@@ -293,6 +294,10 @@ button:active {
   border-color: rgba(0, 0, 0, 0.2);
   border-style: inset;
   border-width: 1px;
+}
+
+.inventory-slot.is-drop {
+  background-color: $dropColor
 }
 
 .inventory-slot-label-box {

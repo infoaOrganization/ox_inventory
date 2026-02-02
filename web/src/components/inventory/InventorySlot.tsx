@@ -21,10 +21,11 @@ interface SlotProps {
   inventoryType: Inventory['type'];
   inventoryGroups: Inventory['groups'];
   item: Slot;
+  isDrop: boolean | undefined;
 }
 
 const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> = (
-  { item, inventoryId, inventoryType, inventoryGroups },
+  { item, inventoryId, inventoryType, inventoryGroups, isDrop },
   ref
 ) => {
   const manager = useDragDropManager();
@@ -136,11 +137,11 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
       ref={refs}
       onContextMenu={handleContext}
       onClick={handleClick}
-      className="inventory-slot"
+      className={"inventory-slot" + (isDrop ? ' is-drop': '')}
       style={{
         filter:
           !canPurchaseItem(item, { type: inventoryType, groups: inventoryGroups }) || !canCraftItem(item, inventoryType)
-            ? 'brightness(80%) grayscale(100%)'
+            ? 'brightness(80%)'
             : undefined,
         opacity: isDragging ? 0.4 : 1.0,
         backgroundImage: `url(${item?.name ? getItemUrl(item as SlotWithItem) : 'none'}`,

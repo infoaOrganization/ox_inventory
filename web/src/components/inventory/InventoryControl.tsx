@@ -40,6 +40,9 @@ const InventoryControl: React.FC = () => {
       <UsefulControls infoVisible={infoVisible} setInfoVisible={setInfoVisible} />
       <div className="inventory-control">
         <div className="inventory-control-wrapper">
+          <div className="control-input-desc">
+            사용할 개수
+          </div>
           <input
             className="inventory-control-input"
             type="number"

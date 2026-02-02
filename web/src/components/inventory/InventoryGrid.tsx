@@ -8,7 +8,7 @@ import { useIntersection } from '../../hooks/useIntersection';
 
 const PAGE_SIZE = 30;
 
-const InventoryGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {
+const InventoryGrid: React.FC<{ inventory: Inventory, isDrop: boolean | undefined, labelPrefix: string | undefined }> = ({ inventory, isDrop, labelPrefix }) => {
   const weight = useMemo(
     () => (inventory.maxWeight !== undefined ? Math.floor(getTotalWeight(inventory.items) * 1000) / 1000 : 0),
     [inventory.maxWeight, inventory.items]
@@ -28,7 +28,7 @@ const InventoryGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {
       <div className="inventory-grid-wrapper" style={{ pointerEvents: isBusy ? 'none' : 'auto' }}>
         <div>
           <div className="inventory-grid-header-wrapper">
-            <p>{inventory.label}</p>
+            <p>{labelPrefix ?? ''}{inventory.label}</p>
             {inventory.maxWeight && (
               <p>
                 {weight / 1000}/{inventory.maxWeight / 1000}kg
@@ -36,6 +36,13 @@ const InventoryGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {
             )}
           </div>
           <WeightBar percent={inventory.maxWeight ? (weight / inventory.maxWeight) * 100 : 0} />
+          {
+            isDrop ?
+              <>
+                <div className="drop-notice" style={{color: 'red', fontSize: '0.8em'}}>주의: 이 인벤토리에 넣은 아이템은 잃어버릴 수 있습니다.</div>
+              </>
+              : null
+          }
         </div>
         <div className="inventory-grid-container" ref={containerRef}>
           <>
@@ -47,6 +54,7 @@ const InventoryGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {
                 inventoryType={inventory.type}
                 inventoryGroups={inventory.groups}
                 inventoryId={inventory.id}
+                isDrop={isDrop}
               />
             ))}
           </>
