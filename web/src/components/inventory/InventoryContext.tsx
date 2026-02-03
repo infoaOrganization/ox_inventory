@@ -48,7 +48,7 @@ const InventoryContext: React.FC = () => {
         onUse(item);
         break;
       case 'use-multi':
-        if (item.custom)
+        if (item.metadata && item.metadata.canUseMultiple)
           onUseMulti(item);
         break;
       case 'give':
@@ -98,7 +98,7 @@ const InventoryContext: React.FC = () => {
     <>
       <Menu>
         <MenuItem onClick={() => handleClick({ action: 'use' })} label={Locale.ui_use || 'Use'} />
-        {item && item.custom && (
+        {item && item.metadata && item.metadata.canUseMultiple && (
           <>
             <MenuItem onClick={() => handleClick({ action: 'use-multi' })} label={(Locale.ui_use || 'Use') + ' (여러 개)'} />
           </>

@@ -17,7 +17,10 @@ dependencies {
     'ox_inventory_config',
 }
 
-shared_script '@ox_lib/init.lua'
+shared_script {
+    '@es_extended/imports.lua',
+    '@ox_lib/init.lua'
+}
 
 ox_libs {
     'locale',
