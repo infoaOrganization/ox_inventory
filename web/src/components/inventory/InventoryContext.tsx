@@ -45,7 +45,7 @@ const InventoryContext: React.FC = () => {
 
     switch (data && data.action) {
       case 'use':
-        onUse({ name: item.name, slot: item.slot });
+        onUse(item);
         break;
       case 'use-multi':
         if (item.custom)
