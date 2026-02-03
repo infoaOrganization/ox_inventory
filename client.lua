@@ -1675,6 +1675,47 @@ RegisterNUICallback('useFakeItem', function(event, cb)
 	cb(1)
 end)
 
+RegisterNUICallback('useFakeItemMulti', function(data, cb)
+
+    client.closeInventory()
+
+    if not data or not data.event or not data.count then
+        cb(1)
+        return
+    end
+
+    local event = data.event
+    local itemCount = data.count
+
+    local message = exports['aura-dialog']:addMessageAsync('text', '사용할 개수를 입력하세요.')
+    local count = tonumber(message)
+
+    if count == nil then
+        ESX.ShowNotification('올바른 숫자를 입력해주세요.')
+        cb(1)
+        return
+    end
+
+    if count > itemCount then
+        ESX.ShowNotification('소지한 개수보다 많은 수를 입력할 수 없습니다.')
+        cb(1)
+        return
+    end
+
+    if count > 0 then
+        for i = 1, count do
+            if type(event) == 'table' then
+                TriggerEvent(event.name, event.data)
+            else
+                TriggerEvent(event)
+            end
+            Wait(100)
+        end
+    end
+
+	cb(1)
+end)
+
 local function giveItemToTarget(serverId, slotId, count)
     if type(slotId) ~= 'number' then return TypeError('slotId', 'number', type(slotId)) end
     if count and type(count) ~= 'number' then return TypeError('count', 'number', type(count)) end

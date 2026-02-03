@@ -107,7 +107,6 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
   const handleContext = (event: React.MouseEvent<HTMLDivElement>) => {
     event.preventDefault();
     // Disable context menu for fake/custom items
-    if (item.custom) return;
     if (inventoryType !== 'player' || !isSlotWithItem(item)) return;
 
     dispatch(openContextMenu({ item, coords: { x: event.clientX, y: event.clientY } }));

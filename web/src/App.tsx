@@ -57,6 +57,17 @@ debugData([
               imageurl: 'https://i.imgur.com/2xHhTTz.png',
             },
           },
+          {
+            slot: 7,
+            name: 'fake',
+            custom: true,
+            weight: 100,
+            count: 1,
+            metadata: {
+              label: 'Fake Item',
+              imageurl: 'https://i.imgur.com/2xHhTTz.png',
+            },
+          },
         ],
       },
       rightInventory: {

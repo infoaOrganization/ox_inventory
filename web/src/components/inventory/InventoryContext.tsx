@@ -9,6 +9,7 @@ import { setClipboard } from '../../utils/setClipboard';
 import { useAppSelector } from '../../store';
 import React from 'react';
 import { Menu, MenuItem } from '../utils/menu/Menu';
+import { onUseMulti } from '../../dnd/onUseMulti';
 
 interface DataProps {
   action: string;
@@ -45,6 +46,10 @@ const InventoryContext: React.FC = () => {
     switch (data && data.action) {
       case 'use':
         onUse({ name: item.name, slot: item.slot });
+        break;
+      case 'use-multi':
+        if (item.custom)
+          onUseMulti({ name: item.name, slot: item.slot, event: item.event });
         break;
       case 'give':
         onGive({ name: item.name, slot: item.slot });
@@ -93,8 +98,17 @@ const InventoryContext: React.FC = () => {
     <>
       <Menu>
         <MenuItem onClick={() => handleClick({ action: 'use' })} label={Locale.ui_use || 'Use'} />
-        <MenuItem onClick={() => handleClick({ action: 'give' })} label={Locale.ui_give || 'Give'} />
-        <MenuItem onClick={() => handleClick({ action: 'drop' })} label={Locale.ui_drop || 'Drop'} />
+        {item && item.custom && (
+          <>
+            <MenuItem onClick={() => handleClick({ action: 'use-multi' })} label={(Locale.ui_use || 'Use') + ' (여러 개)'} />
+          </>
+        )}
+        {item && !item.custom && (
+          <>
+            <MenuItem onClick={() => handleClick({ action: 'give' })} label={Locale.ui_give || 'Give'} />
+            <MenuItem onClick={() => handleClick({ action: 'drop' })} label={Locale.ui_drop || 'Drop'} />
+          </>
+        )}
         {item && item.metadata?.ammo > 0 && (
           <MenuItem onClick={() => handleClick({ action: 'removeAmmo' })} label={Locale.ui_remove_ammo} />
         )}
