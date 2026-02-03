@@ -8,6 +8,7 @@ local nextId = 1
 ---@field count? number
 ---@field weight? number
 ---@field event? string|{ name: string, data: userdata }
+---@field canUseMultiple? boolean
 
 ---@alias FakeItemProvider fun(): FakeItem[]
 
@@ -99,6 +100,7 @@ local function injectFakeItems(inventory)
                     label = fakeItem.label,
                     description = fakeItem.description,
                 },
+                canUseMultiple = fakeItem.canUseMultiple or false,
             }
         }
 
