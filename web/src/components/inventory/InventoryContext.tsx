@@ -49,7 +49,7 @@ const InventoryContext: React.FC = () => {
         break;
       case 'use-multi':
         if (item.custom)
-          onUseMulti({ name: item.name, slot: item.slot, event: item.event });
+          onUseMulti(item);
         break;
       case 'give':
         onGive({ name: item.name, slot: item.slot });
