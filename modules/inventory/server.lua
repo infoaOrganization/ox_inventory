@@ -35,6 +35,7 @@ function OxInventory:closeInventory(noEvent)
 	if not inv then return end
 
 	inv.openedBy[self.id] = nil
+	if inv.forceOpenedBy then inv.forceOpenedBy[self.id] = nil end
 	inv:set('open', false)
 	self.open = false
 	self.currentShop = nil
@@ -294,7 +295,7 @@ function Inventory.CloseAll(inv, ignoreId)
 	for playerId in pairs(inv.openedBy) do
 		local playerInv = Inventory(playerId)
 
-		if playerInv and playerId ~= ignoreId then
+		if playerInv and playerId ~= ignoreId and not (inv.forceOpenedBy and inv.forceOpenedBy[playerId]) then
             playerInv:closeInventory()
         end
 	end

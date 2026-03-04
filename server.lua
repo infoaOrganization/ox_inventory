@@ -312,6 +312,11 @@ function server.forceOpenInventory(playerId, invType, data)
 	local left, right = openInventory(playerId, invType, data, true)
 
 	if left and right then
+		local rightInv = Inventory(right.id)
+		if rightInv then
+			rightInv.forceOpenedBy = rightInv.forceOpenedBy or {}
+			rightInv.forceOpenedBy[playerId] = true
+		end
 		TriggerClientEvent('ox_inventory:forceOpenInventory', playerId, left, right)
 		return right.id
 	end
